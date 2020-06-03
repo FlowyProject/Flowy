@@ -3,9 +3,9 @@ build-by-default: true
 branches:
 - master
 projects:
-  examples.ListenExample:
+  ListenExample:
     path: examples/ListenExample/
-  flowy:
+  Flowy:
     path: flowy/
     model: virion
     type: library
