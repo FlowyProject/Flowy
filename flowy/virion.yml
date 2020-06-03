@@ -1,0 +1,5 @@
+name: Flowy
+author: WhiteGrouse
+antigen: flowy
+version: 0.1.0
+api: [3.12.0]

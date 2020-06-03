@@ -1,0 +1,8 @@
+name: ListenExample
+main: FlowyExamples\ListenExample\Main
+version: 0.1.0
+api: [3.12.0]
+author: WhiteGrouse
+
+virions:
+  - Flowy
