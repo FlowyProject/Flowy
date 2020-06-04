@@ -17,7 +17,7 @@ class EventStream
 
     public function run(callable $flow, array $args = []): Flow
     {
-        array_unshift($args, $this->stream);
+        array_unshift($args, $this);
         $rawCoroutine = $flow(...$args);
         $coroutine = new Coroutine($this->stream, $rawCoroutine);
         return new Flow($coroutine);
