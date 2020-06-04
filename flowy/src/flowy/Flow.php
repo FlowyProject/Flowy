@@ -8,10 +8,6 @@ class Flow
 
     public function __construct(Coroutine $coroutine)
     {
-        if ($coroutine->isDisposed()) {
-            throw new \RuntimeException("coroutine is disposed");
-        }
-
         $this->coroutine = $coroutine;
     }
 
