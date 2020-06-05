@@ -13,6 +13,8 @@ projects:
       - src: FlowyProject/Flowy
   Standard:
     path: standard/
+    model: virion
+    type: library
     libs:
       - src: FlowyProject/Flowy
 ...
