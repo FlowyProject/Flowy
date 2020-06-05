@@ -1,5 +1,5 @@
 <?php
-namespace flowy\standard\delay;
+namespace flowy\standard;
 
 use flowy\standard\delay\{DelayTask, DelayCallbackEvent};
 
