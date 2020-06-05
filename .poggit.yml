@@ -11,6 +11,7 @@ projects:
     path: examples/ListenExample/
     libs:
       - src: Flowy
+      - src: Standard
   Standard:
     path: standard/
     model: virion
