@@ -5,12 +5,14 @@ use flowy\Flowy;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\plugin\PluginBase;
 use function flowy\{listen, start};
+use 
 
 class Main extends PluginBase
 {
     function onEnable()
     {
         Flowy::bootstrap();
+        Standard::bootstrap();
         $stream = start($this);
         $stream->run(function($stream) {
             while (true) {
