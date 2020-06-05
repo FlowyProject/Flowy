@@ -5,8 +5,8 @@ use pocketmine\plugin\Plugin;
 
 class Flowy
 {
-    /** dummy */
-    public static function load()
+    /* dummy */
+    public static function bootstrap(): void
     {
     }
 }
