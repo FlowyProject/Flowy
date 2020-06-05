@@ -5,7 +5,7 @@ use flowy\Flowy;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\plugin\PluginBase;
 use function flowy\{listen, start};
-use 
+use flowy\standard\Standard;
 
 class Main extends PluginBase
 {
