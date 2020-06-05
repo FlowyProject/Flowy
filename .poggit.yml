@@ -9,12 +9,8 @@ projects:
     type: library
   ListenExample:
     path: examples/ListenExample/
-    libs:
-      - src: FlowyProject/Flowy
   Standard:
     path: standard/
     model: virion
     type: library
-    libs:
-      - src: FlowyProject/Flowy
 ...
