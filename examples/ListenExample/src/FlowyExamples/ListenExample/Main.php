@@ -10,7 +10,7 @@ class Main extends PluginBase
 {
     function onEnable()
     {
-        Flowy::load();
+        Flowy::bootstrap();
         $stream = start($this);
         $stream->run(function($stream) {
             while (true) {
