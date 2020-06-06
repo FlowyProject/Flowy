@@ -6,6 +6,7 @@ class Standard
     /* dummy */
     public static function bootstrap(): void
     {
-        Delay::bootstrap();
     }
 }
+
+require_once __DIR__ . '/Delay.php';

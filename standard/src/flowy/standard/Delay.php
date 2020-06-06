@@ -5,14 +5,6 @@ use pocketmine\scheduler\TaskScheduler;
 use function flowy\listen;
 use flowy\standard\delay\{DelayTask, DelayCallbackEvent};
 
-class Delay
-{
-    /* dummy */
-    public static function bootstrap(): void
-    {
-    }
-}
-
 function delay(TaskScheduler $scheduler, int $tick)
 {
     $handler = $scheduler->scheduleDelayedTask(new DelayTask(), $tick);
