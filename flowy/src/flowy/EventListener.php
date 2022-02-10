@@ -1,12 +1,10 @@
 <?php
 namespace flowy;
 
-use pocketmine\event\Event;
 use pocketmine\event\EventPriority;
 use pocketmine\event\Listener;
-use pocketmine\plugin\MethodEventExecutor;
 use pocketmine\plugin\Plugin;
-use pocketmine\plugin\RegisteredListener;
+use pocketmine\event\RegisteredListener;
 
 class EventListener implements Listener
 {
@@ -31,11 +29,6 @@ class EventListener implements Listener
         $this->handler = $handler;
     }
 
-    public function onEvent(Event $event): void
-    {
-        $this->handler->handle($event);
-    }
-
     public function listen(string $event): void
     {
         if (isset($this->registeredListeners[$event])) {
@@ -44,9 +37,10 @@ class EventListener implements Listener
 
         $this->registeredListeners[$event] = EventHelper::register(
             $event,
-            $this,
+            function($event) {
+                $this->handler->handle($event);
+            },
             EventPriority::NORMAL,
-            new MethodEventExecutor("onEvent"),
             $this->plugin
         );
     }
