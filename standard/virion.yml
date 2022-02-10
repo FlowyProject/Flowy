@@ -2,4 +2,4 @@ name: Standard
 author: WhiteGrouse
 antigen: flowy\standard
 version: 0.1.0
-api: [3.12.0]
+api: [4.0.0]
