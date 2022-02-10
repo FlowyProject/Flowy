@@ -8,7 +8,7 @@ use function flowy\{listen, start};
 
 class Main extends PluginBase
 {
-    function onEnable()
+    protected function onEnable(): void
     {
         Flowy::bootstrap();
         $stream = start($this);
