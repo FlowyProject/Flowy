@@ -4,7 +4,7 @@ namespace flowy\standard\delay;
 use pocketmine\scheduler\Task;
 
 class DelayTask extends Task {
-    public function onRun($currentTick) {
-        (new DelayCallbackEvent($this->getTaskId()))->call();
+    public function onRun(): void {
+        (new DelayCallbackEvent($this))->call();
     }
 }

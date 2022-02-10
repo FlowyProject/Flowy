@@ -2,15 +2,16 @@
 namespace flowy\standard\delay;
 
 use pocketmine\event\Event;
+use pocketmine\scheduler\Task;
 
 class DelayCallbackEvent extends Event {
-    protected $taskId;
+    protected $task;
 
-    public function __construct(int $taskId) {
-        $this->taskId = $taskId;
+    public function __construct(Task $task) {
+        $this->task = $task;
     }
 
-    public function getTaskId(): int {
-        return $this->taskId;
+    public function getTask(): Task {
+        return $this->task;
     }
 }
